@@ -9,7 +9,7 @@ class AutoCommands
         /// @brief Constructor for the AutoCommands class.
         /// @param swerve - Pointer to the robot swerve subsystem.
         /// @param intake - Pointer to the robot intake subsystem.
-        AutoCommands(Swerve *swerve, Intake *intake);
+        AutoCommands(Swerve *swerve);
 
         /// @brief Autonomous command to do nothing.
         void Auto_Do_Nothing();
