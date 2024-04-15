@@ -62,10 +62,6 @@ void Robot::AutonomousInit()
         Autonomous.Auto_Do_Nothing();
     else if (m_AutoCommandselected == kAuto_Move)
         Autonomous.Auto_Move();
-    else if (m_AutoCommandselected == kAuto_Place_Amp_Red)
-        Autonomous.Auto_Place_Amp_And_Move(false);
-    else if (m_AutoCommandselected == kAuto_Place_Amp_Blue)
-        Autonomous.Auto_Place_Amp_And_Move(true);
 }
 
 void Robot::AutonomousPeriodic()
