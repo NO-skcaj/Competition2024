@@ -15,8 +15,6 @@ void Robot::RobotInit()
 {
     m_chooser.SetDefaultOption(kAuto_Do_Nothing,  kAuto_Do_Nothing);
     m_chooser.AddOption(kAuto_Move,               kAuto_Move);
-    m_chooser.AddOption(kAuto_Place_Amp_Red,      kAuto_Place_Amp_Red);
-    m_chooser.AddOption(kAuto_Place_Amp_Blue,     kAuto_Place_Amp_Blue);
 
     SmartDashboard::PutData("Auto Modes", &m_chooser);
 
