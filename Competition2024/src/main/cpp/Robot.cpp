@@ -78,10 +78,6 @@ void Robot::TeleopPeriodic()
     // Get the operator and driver inputs
     O_CONTROLLER.Robot_Periodic();
     D_CONTROLLER.Robot_Periodic();
-
-    // Run the subassembly periodic methods
-    INTAKE.Robot_Periodic();
-    CLIMB.Robot_Periodic();
 }
 
 void Robot::DisabledInit()
