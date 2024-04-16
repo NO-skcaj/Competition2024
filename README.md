@@ -24,6 +24,18 @@ Hardware is fairly simple. You find the documentation, and you implement those m
 * [ctre phoenix 6](https://api.ctr-electronics.com/phoenix6/release/cpp/)
 * [REVlib](https://codedocs.revrobotics.com/cpp/classrev_1_1_spark_max_p_i_d_controller)
 
-These are similarly laid out, which makes finding things simple, and seeing which one your on (or supposed to be on) confusing. The main things that you need are called "class list" or "classes" and "namespace". Class list is where you can find all you need to actually use the motors. Namespaces are what you use when you dont want to type out "rev::hardware::sparkmax::etc::etc" every time you want to use a method from there. You can use it like an implied shortcut. If you have something like "ctre::phoenix6::hardware::TalonFX()", then you can use "using namespace ctre::pheonix6::hardware;" to shorten the definition to just "TalonFX()". CPP will be able to assume that you want a class from that library.
+These are similarly laid out, which makes finding things simple, and seeing which one you're on (or supposed to be on) confusing. The main things that you need are called "classes" and "namespace". The class list is where you can find all you need to use the motors. Namespaces are what you use when you don't want to type out "rev::hardware::sparkmax::etc::etc" every time you want to use a method from there. You can use it as an implied shortcut. If you have something like "ctre::phoenix6::hardware::TalonFX()", then you can use "using namespace ctre::pheonix6::hardware;" to shorten the definition to just "TalonFX()". CPP will be able to assume that you want a class from that library.
 
-CTRE phoenix 6 is the newest library available, and use this for everything. The only time you would use the old phoenix lib is if you have something, or are using something old.
+CTRE Phoenix 6 is the newest library available, and use this for everything. The only time you would use the old phoenix lib is if you have something, or are using something old.
+
+### Smart Dashboard
+
+The Smart dashboard pops up when you start to run the driver station and is installed by default. It allows you to put input into the robot, and see data from it. I can't keep saying this, but it's fairly simple. You use "SmartDashboard::PutInt("Name of thing", value);" to put some data type into the Smart Dashboard, and you can switch PutInt to anything else. It's also the same with input via "SmartDashboard::PutString("Name of thing", default_value);". You can also put video output there, which is extremely useful for driving.
+
+### P.I.D. (F.S.V.)
+
+PID or Proportional–integral–derivative, is a way that we alter motor movement to be better than simple 1,0 inputs. I currently don't *exactly* know how it works. I'm going to work on that, but for now, CTRE has a fairly good definition [here](https://v6.docs.ctr-electronics.com/en/stable/docs/api-reference/device-specific/talonfx/basic-pid-control.html)
+
+### Joysticks
+
+Joysticks use the standard FRC library. Some great documentation and a tutorial can be found [here](https://docs.wpilib.org/en/stable/docs/software/basic-programming/joystick.html). You can use almost any controller including DualShock and Xbox controllers. I have also seen custom driver stations that use home made controllers. We made one of these a few years 
