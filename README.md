@@ -16,7 +16,7 @@ When writing robot code, most of it would be in a subsystem file. A subsystem is
 
 A subsystem has two files associated with it (just the same as other cpp files): a regular .cpp file, and a header .hpp or .h file. A header file is just an extension for the cpp file, so you can think of it as one big file between them. In a header file, you will find the base initializations for all the classes and methods (one class per file), and in a regular cpp file, you will find the definitions for the initialized classes and methods. A general convention for header files is that you don't write any data in the header file. That means that all variable initializations will be empty, ie: "int x;".
 
-### How to connect to hardware
+### How to connect code to hardware
 
 Hardware is fairly simple. You find the documentation, and you implement those methods. However, you have a lot of difference "class lists" that you have to pull from.
 
@@ -38,4 +38,36 @@ PID or Proportional–integral–derivative, is a way that we alter motor moveme
 
 ### Joysticks
 
-Joysticks use the standard FRC library. Some great documentation and a tutorial can be found [here](https://docs.wpilib.org/en/stable/docs/software/basic-programming/joystick.html). You can use almost any controller including DualShock and Xbox controllers. I have also seen custom driver stations that use home made controllers. We made one of these a few years 
+Joysticks use the standard FRC library. Some great documentation and a tutorial can be found [here](https://docs.wpilib.org/en/stable/docs/software/basic-programming/joystick.html). You can use almost any controller including DualShock and Xbox controllers. I have also seen custom driver stations that use home made controllers. We made one of these a few years back, and we should still have it, although I'm not if theres any code from that you could use.
+
+### Swerve
+
+Swerve is the prefered drive train for our team, and we've used it for multiple years. The math behind Swerve code is decepitvely difficult, it requires lots and lots of trigonomotry. That is why we use papers written by people who have spend many more hours than they'd probably like to admit. Particularly, you can find almost everything that you need in these two Chef Delphi threads:
+
+* [LOTS of papers](https://www.chiefdelphi.com/t/paper-4-wheel-independent-drive-independent-steering-swerve/107383)
+* [3 papers that are extremely useful](https://www.chiefdelphi.com/t/math-and-programming-behind-swerve/130241/9_)
+thx Ether
+
+If you just want the base swerve code you can basically copy paste the paper on the second link labeled "How to use the equations:". However, these aren't exactly perfect. The turning while moving works, but not that well; you can only go in one direction; and the wheels always go back to zero. These are all very fixable problems that have been solved before, that we will work on.
+
+### Testing
+
+Testing is the fun part. The process is as follows: Connect the laptop to the robot via a cable (USB-A or Ethernet directly into the roborio), or through the radio; then open up driver station and verify that you have robot communication and joysticks; finally, you can deploy the code.
+Some of these aren't very simple so here's instructions for some of them:
+**Deploying Code**
+If you're using VS Code to write robot code, you will need the extension, which you can only get through
+
+**Connecting to the Radio**
+1. Connect the roboRIO directly into the radio with an Ethernet cable (make sure that its plugged into the middle port)
+2. Open up the radio utility and put in your team number and set "Radio:" to OpenMesh
+3. Connect to the robot through WIFI
+4. Deploy from WPI VS code extension
+NOTE: make sure to update firmware from time to time
+
+### Contributing
+
+In order to contribute, you will need to be part of the HVA Robotics organization. Then, you can create a branch, work on that, then merge once everything is ready. When you're on the driver laptop, you can just commit tested code directly to main.
+
+### Troubleshooting
+
+Now, when a silly build member walks up to you and says the code is broken, remain calm. If the code has been tested before, and it works, pretend to do something that looks like code, and have them also try to troubleshoot on their end. Half the time its a build problem, half the time you wrote bad code and/or bad math. Now, if its not a problem on either end, then you're either missing something stupid OR its a problem with the actual harware/firmware. Don't be afraid to ask for help if you suspect its a programming problem, no one knows how to do this when they have just started.
