@@ -6,4 +6,8 @@ The Include folder has all of the header files (.hpp and .h) that are required f
 
 ### CPP
 
-The CPP folder is where all of the CPP files are. This is the main code where you will be defining methods and setting non-const variables
+The CPP folder is where all of the CPP files are. This is the main code where you will be defining methods and the values of non-const variables. You can think of this as the code that is executed and the Include folder as code that is read.
+
+### Deploy
+
+You can put code in here that is immedietly sent to the roborio. This is mostly used for testing, although there is no working template since we haven't used it before.
