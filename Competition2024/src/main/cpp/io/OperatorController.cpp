@@ -1,6 +1,7 @@
 #include <frc/smartdashboard/SmartDashboard.h>
 
 #include "../../include/io/OperatorController.hpp"
+#include "../../include/subsystems/ExampleLauncher.hpp"
 
 /// @brief Constructor for the OperatorController class.
 OperatorController::OperatorController()
@@ -29,4 +30,8 @@ void OperatorController::Robot_Periodic()
     //                              RIGHT_JOYSTICK_X
     //                              RIGHT_JOYSTICK_Y
     // I'm also fairly certain that m_driver_joystick.GetY() also works
+
+    // This is the code for the example launcher
+    // WARNING this has not yet been compiled, so there might be some minor problems.
+    this->LAUNCHER_MOTORS->Set(m_driver_joystick.GetRawAxis(LEFT_JOYSTICK_Y));
 }
