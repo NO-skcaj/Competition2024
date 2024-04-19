@@ -9,6 +9,9 @@
 #include <ctre/phoenix6/TalonFX.hpp>
 #include <ctre/phoenix6/configs/Configs.hpp>
 
+// This includes the cpp header file that is associated with it.
+#include "../../include/subsystems/ExampleLauncher.hpp"
+
 // @breif This class is an example launcher for the robot
 Launcher::Launcher()
 {
