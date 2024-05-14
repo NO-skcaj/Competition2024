@@ -12,7 +12,9 @@ If you're looking for a beginner approach to cpp, it is highly encouraged to lea
 
 ## What do I need to install?
 
-There are a few things that you need to develop and run code. You can use the guide provided by FRC, [here](https://docs.wpilib.org/en/stable/docs/zero-to-robot/step-2/frc-game-tools.html). OR you can download everything you need in these two links: [Game Tools](https://www.ni.com/en/support/downloads/drivers/download.frc-game-tools.html#500107), and [WPIlib dev tools](https://github.com/wpilibsuite/allwpilib/releases/tag/v2024.3.2).
+There are a few things that you need to develop and run code. You can use the guide provided by FRC, [here](https://docs.wpilib.org/en/stable/docs/zero-to-robot/step-2/frc-game-tools.html). OR you can download everything you need in these two links: [Game Tools](https://www.ni.com/en/support/downloads/drivers/download.frc-game-tools.html#500107), and [WPIlib dev tools](https://github.com/wpilibsuite/allwpilib/releases/tag/v2024.3.2). Quick note: you will need the WPIlib VS code extension installed. If it doesn't work or isn't there, this whole thing won't run.
+
+As for dependencies: You will need to download [Java](https://javadl.oracle.com/webapps/download/AutoDL?BundleId=249833_43d62d619be4e416215729597d70b8ac) and you will probably need (visual studio)[with Desktop cpp development)](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&channel=Release&version=VS2022&source=VSLandingPage&cid=2030&passive=false) but you will only really need it for simulation though. The rest of the things you need -like Gradle- will be installed by the WPI extension on VScode.
 
 ## What OS can I use?
 
